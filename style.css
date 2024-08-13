@@ -44,6 +44,11 @@ div.container {
     border: 5px solid #555;
 }
 
+.image {
+    cursor: move;
+    border: 5px solid #fff;
+}
+  
 .flex {
     display: flex;
     justify-content: center;
@@ -51,5 +56,5 @@ div.container {
 }
 
 .selected {
-    border: 5px solid rgb(0, 195, 255); 
+    border: 5px solid rgb(0, 195, 255);
 }

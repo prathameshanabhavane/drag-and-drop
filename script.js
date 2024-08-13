@@ -1,25 +1,22 @@
 let imageElement = document.querySelectorAll('.image');
 
-// console.log(imageElement);
-
 imageElement.forEach(element => {
     element.addEventListener('dragstart', (e) => {
-        // console.log('drag start', e.target.id)
         element.style.opacity = 0.5;
+        element.classList.add("selected");
         
         e.dataTransfer.setData("text", e.target.id)
     })
 
     element.addEventListener('dragend', (e) => {
-        // console.log('drag end', e.target.id)
-        element.style.opacity = 1;  
+        element.style.opacity = 1;
+        element.classList.remove("selected");
 
     })
 
     let eventsArray = ["dragover", "dragenter", "drop"];
 
     eventsArray.forEach(dragEvent => {
-        // console.log(dragEvent)
 
         let dropElement = document.querySelectorAll('.image');
 
